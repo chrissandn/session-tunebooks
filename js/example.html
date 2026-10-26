@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<script src="js/abcweb-1.js" async="true"></script>
+<title>txtmus/abc2svg - inline music</title>
+<style>
+    body {max-width:21cm}
+    h1 {font-size: 1.4rem}
+    code {font-size:1.2em;background-color:#aaeeee}
+    svg {display:block}
+</style>
+<body>
+<noscript>Javascript is needed to show the music</noscript>
+<script type="text/vnd.abc">
+    %abc-2.2
+    % global ABC definitions
+    %%leftmargin 4
+    %%rightmargin 4
+    %%topspace 0
+    %%titlespace 0
+    %%composerspace 0
+    %%musicspace 0
+    %%staffsep 30
+    %%bgcolor lightblue
+    %%musicfont url(../js/abc2svg.woff2)
+</script>
+
+<h1>Music inside text lines</h3>
+
+    <i>tmweb-2.js</i> as well as <i>abcweb-1.js</i> include the generated images
+    of the music inside a &lt;div&gt; container.<br>
+    By default, these containers are blocks (style <code>display:block)</code>
+    that start a new line:
+
+    <p>
+        Line with music
+        <script type="text/vnd.abc">
+            X:2
+            %%pagewidth 5cm
+            M:C
+            L:1/4
+            K:C
+            CDEF|]
+
+        </script>
+        (end of line)
+
+    <p>
+        To prevent opening a new line may be done using a &lt;span&gt; element
+        with a style <code>display:inline-block</code>:
+
+    <p>
+        Line with music
+        <span style="display:inline-block">
+<script type="text/vnd.abc">
+X:2
+%%pagewidth 5cm
+M:C
+L:1/4
+K:C
+CDEF|]
+
+</script>
+</span>
+        (end of line)
+
+    <p>
+        To keep the music images at different vertical offset, it is important for
+        the SVG elements to have a style <code>display:block</code>.
+        This is what is done in the header of this HTML page:
+
+    <p>
+        This tune is vertical
+        <span style="display:inline-block">
+<script type="text/vnd.abc">
+X:4
+%%pagewidth 5cm
+M:C
+L:1/4
+K:C
+CDEF|
+GABc|]
+
+</script>
+</span>
+        (end of line)
+
+    <p>
+        To adjust the vertical offset of the music in the line, the style
+        <code>vertical-align</code> may be used:
+
+    <p>
+        Centered music
+        <span style="display:inline-block; vertical-align:-20px">
+<script type="text/vnd.abc">
+X:2
+%%pagewidth 5cm
+M:C
+L:1/4
+K:C
+CDEF|]
+
+</script>
+</span>
+        (end of line)
+
+    <p>
+        With many lines
+        <span style="display:inline-block; vertical-align:-50px">
+<script type="text/vnd.abc">
+X:4
+%%pagewidth 5cm
+M:C
+L:1/4
+K:C
+CDEF|
+GABc|]
+
+</script>
+</span>
+        (end of line)
+
+    <p style="text-align:center">
+        <b>abc2svg</b>
+        <a href="http://moinejf.free.fr/abcm2ps-doc/index.html"
+           target="_top">documentation</a>
+        <a href="https://chiselapp.com/user/moinejf/repository/abc2svg"
+           target="_top">source</a>
+        <a href="mailto:Jean-François Moine <moinejf@free.fr>"
+           target="_top">author</a>
+        - page hosted by <a href="http://www.free.fr/"
+                            target="_top">Free</a>
+    </p>
+    </html>

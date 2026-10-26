@@ -1,0 +1,18 @@
+# Normalize line endings: store as LF in git (Linux server expects LF)
+* text=auto eol=lf
+
+# Binary files ÔÇö no conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.zip binary
+*.gz binary
+*.mo binary
