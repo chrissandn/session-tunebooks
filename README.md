@@ -1,7 +1,7 @@
 # Session Tunebooks — WordPress theme
 
 A tune collection for folk sessions, as running on
-[tunes.chrissandner.at](https://tunes.chrissandner.at/):
+[tunes2.chrissandner.at](https://tunes2.chrissandner.at/):
 
 - take over tunes from thesession.org, ABC notation or scanned sheet music
 - build sets, tunebooks for sessions, personal books per user
